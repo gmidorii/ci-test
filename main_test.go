@@ -32,8 +32,8 @@ func Test_fizzbuzz(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			time.Sleep(30 * time.Second)
 			if got := fizzbuzz(tt.args.a); got != tt.want {
+				time.Sleep(20 * time.Second)
 				t.Errorf("fizzbuzz() = %v, want %v", got, tt.want)
 			}
 		})
