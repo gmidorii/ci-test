@@ -2,7 +2,6 @@ package main
 
 import (
 	"testing"
-	"time"
 )
 
 func Test_fizzbuzz(t *testing.T) {
@@ -33,7 +32,6 @@ func Test_fizzbuzz(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := fizzbuzz(tt.args.a); got != tt.want {
-				time.Sleep(25 * time.Second)
 				t.Errorf("fizzbuzz() = %v, want %v", got, tt.want)
 			}
 		})
