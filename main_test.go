@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"testing"
+	"time"
+)
 
 func Test_fizzbuzz(t *testing.T) {
 	type args struct {
@@ -29,6 +32,7 @@ func Test_fizzbuzz(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			time.Sleep(5 * time.Second)
 			if got := fizzbuzz(tt.args.a); got != tt.want {
 				t.Errorf("fizzbuzz() = %v, want %v", got, tt.want)
 			}
