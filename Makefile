@@ -5,3 +5,7 @@ build:
 
 test:
 	go test -v ./...
+
+test-cover:
+	go test -v -cover -coverprofile=c.out
+	go tool -v cover -html=c.out -o coverage.html

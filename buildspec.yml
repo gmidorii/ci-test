@@ -10,10 +10,14 @@ phases:
       - apt-get update -y
   build:
     commands:
-      - make test
       - make build
+    
+  test:
+    commands:
+      - make test-cover
 
 artifacts:
   files:
     - '*/ci-test'
+    - '*/coverage.html'
   name: ci-test-$(date +%Y-%m-%d)
