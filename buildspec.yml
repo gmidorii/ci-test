@@ -16,6 +16,6 @@ phases:
 
 artifacts:
   files:
-    - '*/ci-test'
-    - '*/coverage.html'
+    - './ci-test'
+    - './coverage.html'
   name: ci-test-$(date +%Y-%m-%d)
