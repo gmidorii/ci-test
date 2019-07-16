@@ -10,6 +10,7 @@ phases:
       - apt-get update -y
   build:
     commands:
+      - echo 'Entered build ...'
       - make build
       - make test-cover
 
