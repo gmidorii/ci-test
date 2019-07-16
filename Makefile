@@ -8,4 +8,4 @@ test:
 
 test-cover:
 	go test -v -cover -coverprofile=c.out
-	go tool -v cover -html=c.out -o coverage.html
+	go tool cover -html=c.out -o coverage.html
